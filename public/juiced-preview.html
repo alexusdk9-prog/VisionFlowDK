@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUICED Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+html, body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: #0b0f14;
+    color: #ffffff;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 255, 153, 0.06), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0, 207, 255, 0.06), transparent 45%);
+    pointer-events: none;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+}
+
+.logo { font-size: 24px; letter-spacing: 2px; }
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 96px 64px 64px;
+}
+
+.hero-text { max-width: 640px; }
+
+.hero-text h1 {
+    font-size: 76px;
+    line-height: 1.03;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.75;
+    margin-bottom: 48px;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 56px;
+    border-radius: 999px;
+    background-color: #00ff99;
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.cta:hover { transform: translateY(-2px); opacity: 0.9; }
+
+.hero-visual {
+    font-size: 180px;
+    letter-spacing: 14px;
+    opacity: 0.045;
+    user-select: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 48px 64px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.45;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 255, 153, 0.1);
+    color: #00ff99;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.back-btn:hover {
+    background-color: rgba(0, 255, 153, 0.2);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .hero-text h1 { font-size: 60px; }
+    .hero-text p { font-size: 16px; }
+    .hero-visual { font-size: 140px; }
+    .cta { padding: 16px 48px; font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+    .hero { flex-direction: column; text-align: center; padding: 64px 32px 32px; }
+    .hero-visual { margin-top: 48px; font-size: 120px; }
+    header { flex-direction: column; gap: 24px; padding: 24px 32px; }
+    .cta { padding: 14px 40px; font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 { font-size: 48px; line-height: 1.1; }
+    .hero-text p { font-size: 14px; }
+    .hero-visual { font-size: 100px; letter-spacing: 10px; }
+    .cta { padding: 12px 32px; font-size: 11px; }
+    footer { padding: 32px 16px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<a href="/app/layout.tsx" class="back-btn">&#8592;</a>
+
+<header>
+    <div class="logo">JUICED Preview</div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Pure Power.<br>Real Juice.</h1>
+        <p>100% Natural Ingredients. No Bullshit. Just Juice.</p>
+        <a href="#" class="cta">Try It Now</a>
+    </div>
+    <div class="hero-visual">Juice</div>
+</section>
+
+<footer>
+    JUICED. BUILT FOR REAL ENERGY.<br><br>
+    © 2026 JUICED. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
